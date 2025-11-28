@@ -1,6 +1,5 @@
 "use client";
 
-import { ArrowDown } from "lucide-react";
 import { aleo } from "@/app/ui/fonts";
 import Image from "next/image";
 
@@ -20,8 +19,8 @@ const About = () => {
         <Image
           src="/me.png"
           alt="Profile photo"
-          width={500} // you can adjust these
-          height={500} // Next.js requires width + height
+          width={500} 
+          height={500} 
           className="hidden md:block md:w-[95%] md:h-[90%] object-cover"
         />
       </div>
