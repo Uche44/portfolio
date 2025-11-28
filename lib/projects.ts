@@ -40,7 +40,7 @@ export const projects = [
     tools: ["React", "Typescript", "TailwindCSS", "Django"],
     about:
       "A university platform that streamlines final year project management, supervision and reporting between students, their supervisors and departmental admin.",
-    url: "",
+    url: "https://unitrack-two.vercel.app/",
     github: "https://github.com/Uche44/unitrack-frontend",
   },
 ];
