@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { aleo } from "@/app/ui/fonts";
 import Image from "next/image";
 
@@ -64,11 +64,11 @@ const About = () => {
         </div>
 
         <a
-          href="#contact"
-          className="bg-(--brand) md:w-44 mt-4 flex items-center justify-center px-6 py-3 md:px-5 md:py-2 rounded-4xl text-white cursor-pointer hover:brightness-110"
+          href="/perp.pdf"
+          download
+          className="bg-(--brand) md:w-47 mt-4 flex items-center justify-center px-5 py-2 rounded-4xl text-white cursor-pointer hover:brightness-110"
         >
-          <p className="md:text-[15px]">GET IN TOUCH</p>
-          <ArrowRight className="h-3.5" />
+          <p className="text-[13px]">DOWNLOAD MY CV</p>
         </a>
       </div>
     </section>

@@ -2,7 +2,7 @@
 
 import { useTypingEffect } from "@/hooks/useTypingEffect";
 import Image from "next/image";
-import { ArrowRight, Twitter, Linkedin, Github } from "lucide-react";
+import { Twitter, Linkedin, Github, ArrowDown } from "lucide-react";
 import { FlowingLogos } from "./ui/flowing-logos";
 import { aleo } from "@/app/ui/fonts";
 
@@ -66,10 +66,10 @@ const Hero = () => {
           {/* Button */}
           <a
             href="#contact"
-            className="bg-(--brand) md:w-44 flex items-center justify-center px-5 py-2 rounded-4xl text-white cursor-pointer hover:brightness-110"
+            className="bg-(--brand) md:w-44 flex items-center justify-center px-6 py-3 md:px-5 md:py-2 rounded-4xl text-white cursor-pointer hover:brightness-110"
           >
-            <p className="text-[15px]">GET IN TOUCH</p>
-            <ArrowRight className="h-3.5" />
+            <p className="md:text-[15px]">GET IN TOUCH</p>
+            <ArrowDown className="h-3.5" />
           </a>
 
           {/* Social Icons */}
