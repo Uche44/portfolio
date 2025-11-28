@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
       </div>
 
      
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between text-xs md:text-sm  gap-2">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between text-xs md:text-sm gap-2">
         <p>
           © {new Date().getFullYear()}{" "}
           <span className="font-semibold text-white">perpetual</span>. All

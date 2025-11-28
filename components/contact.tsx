@@ -1,27 +1,47 @@
 "use client";
 
-import { useState } from "react";
 import { FiSend } from "react-icons/fi";
 import { aleo } from "@/app/ui/fonts";
+import emailjs from "@emailjs/browser";
+import { useRef, useState } from "react";
 
 const ContactMe = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!email || !message) return;
+    if (!formRef.current) return;
 
-    // Here you could integrate an API endpoint or email service
-    console.log({ email, message });
+    setLoading(true);
 
-    setSuccess(true);
-    setEmail("");
-    setMessage("");
+    emailjs
+      .sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        formRef.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      )
+      .then(() => {
+        setSuccess(true);
+        setLoading(false);
 
-    setTimeout(() => setSuccess(false), 3000);
+        // reset fields
+        setEmail("");
+        setMessage("");
+        formRef.current?.reset();
+
+        setTimeout(() => setSuccess(false), 3000);
+      })
+      .catch((err) => {
+        console.error("EmailJS Error:", err);
+        setLoading(false);
+      });
   };
 
   return (
@@ -32,7 +52,7 @@ const ContactMe = () => {
         Get in <span className="text-[#3841ff]">Touch</span>
       </h2>
 
-      <div className=" w-full mx-auto flex gap-4 max-w-5xl">
+      <div className="w-full mx-auto flex gap-4 max-w-5xl">
         <div className="hidden md:flex flex-col justify-center w-[45%] p-6 border border-white/10 rounded-2xl bg-[#0d1736]/40 backdrop-blur-md shadow-lg">
           <p
             className={`${aleo.className} text-2xl font-extrabold leading-snug`}
@@ -42,20 +62,18 @@ const ContactMe = () => {
           </p>
 
           <p className="mt-6 text-xl font-bold text-[#3841ff] flex items-center gap-3">
-            Hit here 👉
-            <span className="animate-bounce text-4xl">📩</span>
+            Hit here 👉 <span className="animate-bounce text-4xl">📩</span>
           </p>
         </div>
 
         <form
-          action="https://formsubmit.co/perpetualuchechukwu808@gmail.com"
-          method="POST"
+          ref={formRef}
           onSubmit={handleSubmit}
           className="flex flex-col gap-6 md:w-[55%] bg-[#111d45]/20 backdrop-blur-md rounded-2xl p-8 shadow-lg border border-white/10"
         >
           {success && (
-            <p className="text-green-400 text-center font-semibold">
-              Message sent successfully!
+            <p className="text-white text-center font-semibold">
+              Message received. Will respond soon!
             </p>
           )}
 
@@ -69,6 +87,7 @@ const ContactMe = () => {
             <input
               type="email"
               id="email"
+              name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
@@ -86,6 +105,7 @@ const ContactMe = () => {
             </label>
             <textarea
               id="message"
+              name="message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Write your message..."
@@ -99,7 +119,7 @@ const ContactMe = () => {
             type="submit"
             className="flex items-center justify-center gap-2 bg-[#3841ff] hover:bg-[#2c34d1] transition text-white font-semibold py-3 rounded-lg shadow-md"
           >
-            Send Message <FiSend />
+            {loading ? "Sending..." : "Send Message"} <FiSend />
           </button>
         </form>
       </div>
