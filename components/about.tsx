@@ -12,14 +12,11 @@ const About = () => {
   ];
 
   return (
-    <section className="w-full min-h-screen px-2 md:px-4 py-10 md:flex items-start justify-center gap-6">
+    <section
+      id="about"
+      className="w-full min-h-screen px-2 md:px-4 py-10 md:flex items-start justify-center gap-6"
+    >
       <div className="md:w-[30%] md:h-[70vh] rounded-[3rem] bg-white/5 backdrop-blur-3xl border border-(--brand) flex items-end shadow-lg">
-        {/* <img
-          src="me.png"
-          alt=""
-          className="hidden md:block md:w-[95%] md:h-[90%]"
-        /> */}
-     
         <Image
           src="/me.png"
           alt="Profile photo"
@@ -66,10 +63,13 @@ const About = () => {
           ))}
         </div>
 
-        <button className="bg-(--brand) md:w-44 mt-4 flex items-center justify-center px-6 py-3 md:px-5 md:py-2 rounded-4xl text-white cursor-pointer hover:brightness-110">
+        <a
+          href="#contact"
+          className="bg-(--brand) md:w-44 mt-4 flex items-center justify-center px-6 py-3 md:px-5 md:py-2 rounded-4xl text-white cursor-pointer hover:brightness-110"
+        >
           <p className="md:text-[15px]">GET IN TOUCH</p>
           <ArrowRight className="h-3.5" />
-        </button>
+        </a>
       </div>
     </section>
   );

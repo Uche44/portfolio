@@ -26,7 +26,7 @@ const Hero = () => {
     },
     {
       name: "GitHub",
-      href: "https://github.com/perpetualuchechukwu",
+      href: "https://github.com/Uche44",
       icon: <Github className="text-(--brand)" />,
     },
   ];
@@ -64,10 +64,13 @@ const Hero = () => {
         </p>
         <div className="w-full h-fit flex items-center gap-4 mt-3">
           {/* Button */}
-          <button className="bg-(--brand) md:w-44 flex items-center justify-center px-5 py-2 rounded-4xl text-white cursor-pointer hover:brightness-110">
+          <a
+            href="#contact"
+            className="bg-(--brand) md:w-44 flex items-center justify-center px-5 py-2 rounded-4xl text-white cursor-pointer hover:brightness-110"
+          >
             <p className="text-[15px]">GET IN TOUCH</p>
             <ArrowRight className="h-3.5" />
-          </button>
+          </a>
 
           {/* Social Icons */}
           <div className="flex gap-2 ">

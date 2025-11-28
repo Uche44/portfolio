@@ -45,7 +45,10 @@ const ContactMe = () => {
   };
 
   return (
-    <section className="w-full py-20 px-5 md:px-4 bg-[#111d45] text-white">
+    <section
+      id="contact"
+      className="w-full py-20 px-5 md:px-4 bg-[#111d45] text-white"
+    >
       <h2
         className={`${aleo.className} text-2xl md:text-3xl font-bold text-center mb-14`}
       >

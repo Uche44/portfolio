@@ -95,7 +95,10 @@ const services: Service[] = [
 
 export default function Services() {
   return (
-    <section className="w-full py-20 px-5 md:px-16 lg:px-24 bg-[#111d45] text-white">
+    <section
+      id="services"
+      className="w-full py-20 px-5 md:px-16 lg:px-24 bg-[#111d45] text-white"
+    >
       <h2
         className={`${aleo.className} text-2xl md:text-3xl font-bold text-center mb-14`}
       >
