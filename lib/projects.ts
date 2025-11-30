@@ -26,6 +26,15 @@ export const projects = [
     github: "https://github.com/Uche44/interactive-cart",
   },
   {
+    img: "https://res.cloudinary.com/dcw1m1rak/image/upload/v1764523090/Perpetual_A._-_Frontend_web_developer_-_Upwork_Freelancer_from_Suleja_Nigeria_-_Brave_10_29_2025_2_59_53_PM_k4oatf.png",
+    name: "Logicraft Landing Page",
+    tools: ["React", "Tailwindcss"],
+    about:
+      "A landing page for a cargo and shipment company that fully communicates their goals, services and values.",
+    url: "https://logicraft-rho.vercel.app/",
+    github: "https://github.com/Uche44/logicraft",
+  },
+  {
     img: "https://res.cloudinary.com/dcw1m1rak/image/upload/v1762256388/Learnthru_dashboard_with_calendar_feature_v6gsry.png",
     name: "Learnthru",
     tools: ["React", "TailwindCSS", "TypeScript", "Django"],
