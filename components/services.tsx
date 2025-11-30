@@ -100,7 +100,7 @@ export default function Services() {
       className="w-full py-20 px-5 md:px-16 lg:px-24 bg-[#111d45] text-white"
     >
       <h2
-        className={`${aleo.className} text-2xl md:text-3xl font-bold text-center mb-14`}
+        className={`${aleo.className} text-2xl tracking-wider md:text-3xl font-bold text-center mb-14`}
       >
         My <span className="text-[#3841ff]">Services</span>
       </h2>
@@ -130,13 +130,13 @@ export default function Services() {
 
               {/* Title */}
               <h3
-                className={`${aleo.className} text-xl md:text-2xl font-semibold mb-2`}
+                className={`${aleo.className} text-xl tracking-wide md:text-2xl font-semibold mb-2`}
               >
                 {service.name}
               </h3>
 
               {/* Description */}
-              <p className="text-white/80 text-sm md:text-base">
+              <p className="text-white/80 tracking-wide text-sm md:text-base">
                 {service.description}
               </p>
             </div>

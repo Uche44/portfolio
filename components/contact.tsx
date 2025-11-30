@@ -50,7 +50,7 @@ const ContactMe = () => {
       className="w-full py-20 px-5 md:px-4 bg-[#111d45] text-white"
     >
       <h2
-        className={`${aleo.className} text-2xl md:text-3xl font-bold text-center mb-14`}
+        className={`${aleo.className} text-2xl tracking-wider md:text-3xl font-bold text-center mb-14`}
       >
         Get in <span className="text-[#3841ff]">Touch</span>
       </h2>
@@ -75,7 +75,7 @@ const ContactMe = () => {
           className="flex flex-col gap-6 md:w-[55%] bg-[#111d45]/20 backdrop-blur-md rounded-2xl p-8 shadow-lg border border-white/10"
         >
           {success && (
-            <p className="text-white text-center font-semibold">
+            <p className="text-white bg-green-600 px-3 py-5 rounded-2xl text-center font-semibold">
               Message received. Will respond soon!
             </p>
           )}

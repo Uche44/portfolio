@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const About = () => {
   const progress = [
-    { id: 1, num: "1", text: "Hackathons Won" },
+    { id: 1, num: "1", text: "Hackathon Won" },
     { id: 2, num: "2+", text: "Years Experience" },
     { id: 3, num: "5+", text: "Projects Built" },
   ];
@@ -13,14 +13,14 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full min-h-screen px-2 md:px-4 py-10 md:flex items-start justify-center gap-6"
+      className="w-full min-h-screen mt-5 px-2 md:px-4 py-10 md:flex items-start justify-center gap-6"
     >
       <div className="md:w-[30%] md:h-[70vh] rounded-[3rem] bg-white/5 backdrop-blur-3xl border border-(--brand) flex items-end shadow-lg">
         <Image
           src="/me.png"
           alt="Profile photo"
-          width={500} 
-          height={500} 
+          width={500}
+          height={500}
           className="hidden md:block md:w-[95%] md:h-[90%] object-cover"
         />
       </div>
@@ -28,18 +28,18 @@ const About = () => {
       {/* text */}
 
       <div className="md:w-[53%] md:h-64 flex flex-col items-start ">
-        <div className="md:text-[15px] text-white/70 bg-[#181482] px-2 py-1 rounded-[5px]">
+        <div className="md:text-[15px] tracking-wide text-white/70 bg-[#181482] px-2 py-1 rounded-[5px]">
           ABOUT ME
         </div>
 
         <h1
-          className={`${aleo.className} text-2xl antialiased mt-2 md:text-5xl md:mt-0 font-bold text-white leading-snug`}
+          className={`${aleo.className} text-2xl tracking-wider antialiased mt-2 md:text-5xl md:mt-0 font-bold text-white leading-snug`}
         >
           I AM AVAILABLE FOR{" "}
           <span className="text-(--brand)">WEB DEVELOPMENT </span> PROJECTS
         </h1>
 
-        <p className="text-white text-[18px] mb-4 mt-2 md:mt-4">
+        <p className="text-white tracking-wide text-[18px] mb-4 mt-4 md:mt-4">
           I’m a frontend developer who enjoys bringing ideas to life through
           clean, responsive, and interactive web designs. I also have some
           experience with backend development, which helps me understand the
@@ -67,7 +67,7 @@ const About = () => {
           download
           className="bg-(--brand) md:w-47 mt-4 flex items-center justify-center px-5 py-2 rounded-4xl text-white cursor-pointer hover:brightness-110"
         >
-          <p className="text-[13px]">DOWNLOAD MY CV</p>
+          <p className="text-[13px] tracking-wide">DOWNLOAD MY CV</p>
         </a>
       </div>
     </section>

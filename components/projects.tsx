@@ -12,7 +12,7 @@ export default function Projects() {
       className="w-full py-20 px-5 md:px-16 lg:px-24 bg-[#111d45] text-white"
     >
       <h2
-        className={`${aleo.className} text-2xl md:text-3xl font-bold text-center mb-14`}
+        className={`${aleo.className} text-2xl tracking-wider md:text-3xl font-bold text-center mb-14`}
       >
         My <span className="text-[#3841ff]">Projects</span>
       </h2>
@@ -65,7 +65,7 @@ export default function Projects() {
 
               {/* Title */}
               <h3
-                className={`${aleo.className} text-(--brand) mt-4 text-lg md:text-xl font-semibold`}
+                className={`${aleo.className} text-(--brand) tracking-wide mt-4 text-lg md:text-xl font-semibold`}
               >
                 {project.name}
               </h3>
@@ -76,7 +76,7 @@ export default function Projects() {
                   <span
                     key={tool}
                     className="
-                      text-xs bg-white/10 border border-white/10
+                      text-xs bg-white/10 border tracking-wide border-white/10
                       px-2 py-1 rounded-md
                     "
                   >
@@ -85,7 +85,7 @@ export default function Projects() {
                 ))}
               </div>
 
-              <p className="text-sm text-white/80 mt-3 grow">
+              <p className="text-sm text-white/80 mt-3 tracking-wide grow">
                 {project.about}
               </p>
 
