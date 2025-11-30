@@ -28,7 +28,7 @@ export default function Projects() {
               transition-all duration-500 shadow-xl
             "
           >
-            {/* MIRROR GLASS OVERLAY */}
+          
             <div
               className="
                 absolute inset-0 opacity-0 group-hover:opacity-20

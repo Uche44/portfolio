@@ -29,7 +29,7 @@ html {
   }
 }
 
-/* Recreate the Tailwind-like animation utilities */
+
 .animate-canopy-horizontal {
   animation: canopy-x var(--duration) infinite linear;
 }

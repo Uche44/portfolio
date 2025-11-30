@@ -31,7 +31,7 @@ const ContactMe = () => {
         setSuccess(true);
         setLoading(false);
 
-        // reset fields
+        
         setEmail("");
         setMessage("");
         formRef.current?.reset();

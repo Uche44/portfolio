@@ -10,12 +10,7 @@ import {
 } from "react-icons/fa";
 import { SiNextdotjs } from "react-icons/si";
 import { aleo } from "@/app/ui/fonts";
-
-type Service = {
-  name: string;
-  description: string;
-  icon: React.ReactNode;
-};
+import { Service } from "@/types/services";
 
 const services: Service[] = [
   {
@@ -115,7 +110,6 @@ export default function Services() {
               border border-white/10 overflow-hidden cursor-pointer
             "
           >
-            {/* Mirror/Glass overlay */}
             <div
               className="
               absolute inset-0 opacity-0 group-hover:opacity-20
