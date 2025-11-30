@@ -58,7 +58,7 @@ const Hero = () => {
         >
           {text.toUpperCase()}
         </h1>
-        <p className="text-white mt-4 md:-mt-4 tracking-wide">
+        <p className="text-white mt-2 md:-mt-4 tracking-wide">
           A creative and innovative frontend developer
         </p>
         <div className="w-full mt-4 h-fit flex items-center gap-4 md:mt-3">
