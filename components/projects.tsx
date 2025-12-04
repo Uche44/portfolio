@@ -5,7 +5,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { projects } from "@/lib/projects";
 import { aleo } from "@/app/ui/fonts";
 
-export default function Projects() {
+const Projects = () => {
   return (
     <section
       id="projects"
@@ -25,21 +25,20 @@ export default function Projects() {
               group relative rounded-xl overflow-hidden p-0.5
               bg-linear-to-br from-white/20 to-white/5
               hover:from-[#3841ff] hover:to-[#111d45]
-              transition-all duration-500 shadow-xl
+              transition-all duration-500 shadow-xl pointer-events-none
             "
           >
-          
             <div
               className="
                 absolute inset-0 opacity-0 group-hover:opacity-20
                 transition duration-700
                 bg-linear-to-t from-transparent via-white/30 to-transparent
-                blur-sm
+                blur-sm pointer-events-none
               "
             />
 
             <div className="bg-[#111d45] rounded-xl p-4 flex flex-col h-full">
-              <div className="relative w-full h-48 rounded-lg overflow-hidden">
+              <div className="relative w-full h-48 rounded-lg overflow-hidden pointer-events-none">
                 {/* progress flag */}
 
                 {i === projects.length - 1 && (
@@ -63,14 +62,12 @@ export default function Projects() {
                 />
               </div>
 
-              {/* Title */}
               <h3
                 className={`${aleo.className} text-(--brand) tracking-wide mt-4 text-lg md:text-xl font-semibold`}
               >
                 {project.name}
               </h3>
 
-              {/* Tools */}
               <div className="flex flex-wrap gap-2 mt-2">
                 {project.tools.map((tool) => (
                   <span
@@ -89,25 +86,27 @@ export default function Projects() {
                 {project.about}
               </p>
 
-              <div className="flex items-center justify-between mt-5">
+              <div className="flex items-center justify-between mt-5 pointer-events-auto">
                 <a
                   href={project.url}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="
                     flex items-center gap-1 hover:text-[#3841ff]
-                    transition
+                    transition cursor-pointer pointer-events-auto
                   "
                 >
                   <ExternalLink size={18} />
-                  <span className="text-sm">Live</span>
+                  <span className="text-sm cursor-pointer">Live</span>
                 </a>
 
                 <a
                   href={project.github}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="
                     flex items-center gap-1 hover:text-[#3841ff]
-                    transition
+                    transition pointer-events-auto
                   "
                 >
                   <Github size={18} />
@@ -120,4 +119,6 @@ export default function Projects() {
       </div>
     </section>
   );
-}
+};
+
+export default Projects;
