@@ -64,7 +64,7 @@ const ContactMe = () => {
             hi?
           </p>
 
-          <p className="mt-6 text-xl font-bold text-[#3841ff] flex items-center gap-3">
+          <p className="mt-6 text-xl font-bold text-pink-400 flex items-center gap-3">
             Hit here 👉 <span className="animate-bounce text-4xl">📩</span>
           </p>
         </div>
@@ -83,7 +83,7 @@ const ContactMe = () => {
           <div className="flex flex-col">
             <label
               htmlFor="email"
-              className="mb-2 font-medium"
+              className="mb-2 font-medium text-gray-600"
             >
               Email
             </label>
@@ -94,7 +94,7 @@ const ContactMe = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
-              className="px-4 py-3 rounded-lg border bg-transparent border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#3841ff] transition"
+              className="px-4 py-3 rounded-lg border bg-transparent border-white/20 text-gray-600 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-600 transition"
               required
             />
           </div>
@@ -102,7 +102,7 @@ const ContactMe = () => {
           <div className="flex flex-col">
             <label
               htmlFor="message"
-              className="mb-2 font-medium"
+              className="mb-2 font-medium text-gray-600"
             >
               Message
             </label>
@@ -113,7 +113,7 @@ const ContactMe = () => {
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Write your message..."
               rows={6}
-              className="px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-[#3841ff] transition resize-none"
+              className="px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-gray-600 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-600 transition resize-none"
               required
             ></textarea>
           </div>
