@@ -9,12 +9,12 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="w-full py-20 px-5 md:px-16 lg:px-24 bg-[#111d45] text-white"
+      className="w-full py-20 px-5 md:px-16 lg:px-24 bg-pink-50 text-white"
     >
       <h2
-        className={`${aleo.className} text-2xl tracking-wider md:text-3xl font-bold text-center mb-14`}
+        className={`${aleo.className} text-2xl text-gray-600 tracking-wider md:text-3xl font-bold text-center mb-14`}
       >
-        My <span className="text-[#3841ff]">Projects</span>
+        My <span className="text-pink-600">Projects</span>
       </h2>
 
       <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
@@ -24,7 +24,7 @@ const Projects = () => {
             className="
               group relative rounded-xl overflow-hidden p-0.5
               bg-linear-to-br from-white/20 to-white/5
-              hover:from-[#3841ff] hover:to-[#111d45]
+              hover:from-pink-600 hover:to-pink-500
               transition-all duration-500 shadow-xl pointer-events-none
             "
           >
@@ -32,27 +32,27 @@ const Projects = () => {
               className="
                 absolute inset-0 opacity-0 group-hover:opacity-20
                 transition duration-700
-                bg-linear-to-t from-transparent via-white/30 to-transparent
+                // bg-linear-to-t from-transparent via-white/30 to-transparent
                 blur-sm pointer-events-none
               "
             />
 
-            <div className="bg-[#111d45] rounded-xl p-4 flex flex-col h-full">
+            <div className="bg-white rounded-xl p-4 flex flex-col h-full">
               <div className="relative w-full h-48 rounded-lg overflow-hidden pointer-events-none">
                 {/* progress flag */}
 
-                {i === projects.length - 1 && (
+                {/* {i === projects.length - 1 && (
                   <span
                     className="z-10 
           absolute top-2 right-2
-          bg-[#3841ff] text-white text-[10px] font-semibold
+          bg-pink-600 text-white text-[10px] font-semibold
           px-2 py-1 rounded-md shadow-md
           uppercase tracking-wide
         "
                   >
                     In Progress
                   </span>
-                )}
+                )} */}
 
                 <Image
                   src={project.img}
@@ -73,7 +73,7 @@ const Projects = () => {
                   <span
                     key={tool}
                     className="
-                      text-xs bg-white/10 border tracking-wide border-white/10
+                      text-xs bg-pink-500 border tracking-wide
                       px-2 py-1 rounded-md
                     "
                   >
@@ -82,7 +82,7 @@ const Projects = () => {
                 ))}
               </div>
 
-              <p className="text-sm text-white/80 mt-3 tracking-wide grow">
+              <p className="text-sm text-gray-600 mt-3 tracking-wide grow">
                 {project.about}
               </p>
 
@@ -92,7 +92,7 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
-                    flex items-center gap-1 hover:text-[#3841ff]
+                    flex items-center gap-1 text-gray-600 hover:text-pink-600
                     transition cursor-pointer pointer-events-auto
                   "
                 >
@@ -105,12 +105,12 @@ const Projects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="
-                    flex items-center gap-1 hover:text-[#3841ff]
-                    transition pointer-events-auto
+                    flex items-center gap-1 text-gray-600 hover:text-pink-600
+                    transition cursor-pointer pointer-events-auto
                   "
                 >
                   <Github size={18} />
-                  <span className="text-sm">Code</span>
+                  <span className="text-sm cursor-pointer">Code</span>
                 </a>
               </div>
             </div>

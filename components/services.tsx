@@ -19,7 +19,7 @@ const services: Service[] = [
     icon: (
       <FaLaptopCode
         size={28}
-        className="text-[#3841ff]"
+        className="text-pink-600"
       />
     ),
   },
@@ -29,7 +29,7 @@ const services: Service[] = [
     icon: (
       <FaMobileAlt
         size={28}
-        className="text-[#3841ff]"
+        className="text-pink-600"
       />
     ),
   },
@@ -40,7 +40,7 @@ const services: Service[] = [
     icon: (
       <FaServer
         size={28}
-        className="text-[#3841ff]"
+        className="text-pink-600"
       />
     ),
   },
@@ -50,7 +50,7 @@ const services: Service[] = [
     icon: (
       <FaTools
         size={28}
-        className="text-[#3841ff]"
+        className="text-pink-600"
       />
     ),
   },
@@ -61,7 +61,7 @@ const services: Service[] = [
     icon: (
       <FaPenNib
         size={28}
-        className="text-[#3841ff]"
+        className="text-pink-600"
       />
     ),
   },
@@ -72,7 +72,7 @@ const services: Service[] = [
     icon: (
       <FaPaintBrush
         size={28}
-        className="text-[#3841ff]"
+        className="text-pink-600"
       />
     ),
   },
@@ -82,7 +82,7 @@ const services: Service[] = [
     icon: (
       <SiNextdotjs
         size={28}
-        className="text-[#3841ff]"
+        className="text-pink-600"
       />
     ),
   },
@@ -92,12 +92,12 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="w-full py-20 px-5 md:px-16 lg:px-24 bg-[#111d45] text-white"
+      className="w-full py-20 px-5 md:px-16 lg:px-24 bg-white"
     >
       <h2
-        className={`${aleo.className} text-2xl tracking-wider md:text-3xl font-bold text-center mb-14`}
+        className={`${aleo.className} text-2xl text-gray-600 tracking-wider md:text-3xl font-bold text-center mb-14`}
       >
-        My <span className="text-[#3841ff]">Services</span>
+        My <span className="text-pink-600">Services</span>
       </h2>
 
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -105,7 +105,7 @@ export default function Services() {
           <div
             key={i}
             className="
-              group relative rounded-2xl p-6 bg-[#111d45]/30 backdrop-blur-md
+              group relative rounded-2xl p-6 bg-pink-100 backdrop-blur-md
               shadow-lg hover:shadow-2xl hover:scale-105 transition-transform duration-500
               border border-white/10 overflow-hidden cursor-pointer
             "
@@ -113,7 +113,7 @@ export default function Services() {
             <div
               className="
               absolute inset-0 opacity-0 group-hover:opacity-20
-              bg-linear-to-t from-transparent via-white/20 to-transparent
+              
               blur-lg transition duration-500
             "
             />
@@ -124,13 +124,13 @@ export default function Services() {
 
               {/* Title */}
               <h3
-                className={`${aleo.className} text-xl tracking-wide md:text-2xl font-semibold mb-2`}
+                className={`${aleo.className} text-xl text-gray-600 tracking-wide md:text-2xl font-semibold mb-2`}
               >
                 {service.name}
               </h3>
 
               {/* Description */}
-              <p className="text-white/80 tracking-wide text-sm md:text-base">
+              <p className="text-gray-600 tracking-wide text-sm md:text-base">
                 {service.description}
               </p>
             </div>

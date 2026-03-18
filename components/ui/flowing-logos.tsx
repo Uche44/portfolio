@@ -4,7 +4,7 @@ import React from "react";
 interface Logo {
   name: string;
   image?: string;
-  icon?: React.ReactNode; // 👈 Add icon support here
+  icon?: React.ReactNode;
 }
 
 const FlowingLogo = ({
@@ -59,12 +59,12 @@ const FlowingLogo = ({
 const LogoCard = ({ logo, className }: { logo: Logo; className?: string }) => (
   <div
     className={cn(
-      "flex items-center justify-center h-16 w-16 shrink-0 cursor-pointer overflow-hidden rounded-xl border border-transparent transition-all hover:scale-110 hover:border-blue-400 hover:shadow-[0_0_10px_#60a5fa]",
+      "flex items-center justify-center h-16 w-16 shrink-0 cursor-pointer overflow-hidden rounded-xl border border-transparent transition-all hover:scale-110 hover:border-pink-400 hover:shadow-[0_0_10px_#60a5fa]",
       className
     )}
   >
     {logo.icon ? (
-      <div className="text-3xl text-white flex items-center justify-center">
+      <div className="text-3xl text-pink-400 flex items-center justify-center">
         {logo.icon}
       </div>
     ) : (

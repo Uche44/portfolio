@@ -47,16 +47,16 @@ const ContactMe = () => {
   return (
     <section
       id="contact"
-      className="w-full py-20 px-5 md:px-4 bg-[#111d45] text-white"
+      className="w-full py-20 px-5 md:px-4 bg-pink-50 text-white"
     >
       <h2
-        className={`${aleo.className} text-2xl tracking-wider md:text-3xl font-bold text-center mb-14`}
+        className={`${aleo.className} text-2xl tracking-wider text-gray-600 md:text-3xl font-bold text-center mb-14`}
       >
-        Get in <span className="text-[#3841ff]">Touch</span>
+        Get in <span className="text-pink-600">Touch</span>
       </h2>
 
       <div className="w-full mx-auto flex gap-4 max-w-5xl">
-        <div className="hidden md:flex flex-col justify-center w-[45%] p-6 border border-white/10 rounded-2xl bg-[#0d1736]/40 backdrop-blur-md shadow-lg">
+        <div className="hidden md:flex flex-col justify-center w-[45%] p-6 border border-white/10 rounded-2xl bg-pink-600 backdrop-blur-md shadow-lg">
           <p
             className={`${aleo.className} text-2xl font-extrabold leading-snug`}
           >
@@ -120,7 +120,7 @@ const ContactMe = () => {
 
           <button
             type="submit"
-            className="flex items-center justify-center gap-2 bg-[#3841ff] hover:bg-[#2c34d1] transition text-white font-semibold py-3 rounded-lg shadow-md"
+            className="flex items-center justify-center gap-2 bg-pink-600 hover:bg-pink-500 transition text-white font-semibold py-3 rounded-lg shadow-md cursor-pointer"
           >
             {loading ? "Sending..." : "Send Message"} <FiSend />
           </button>

@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --brand: #3841ff;
+  --brand: #ff006e;
 }
 
 html {

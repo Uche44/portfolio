@@ -15,11 +15,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-transparent backdrop-blur-md shadow-sm z-50">
+    <header className="fixed top-0 left-0 w-full bg-white backdrop-blur-md shadow-sm z-50">
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <a
           href="#home"
-          className="text-2xl font-bold text-white"
+          className="text-2xl font-bold text-gray-600"
         >
           PERPETUAL
         </a>
@@ -30,7 +30,7 @@ export default function Navbar() {
             <li key={link.name}>
               <a
                 href={link.href}
-                className="relative text-white font-medium hover:text-blue-600 transition-colors"
+                className="relative text-gray-600 font-medium hover:text-pink-600 hover:font-bold transition-colors"
               >
                 {link.name}
               </a>
@@ -41,7 +41,7 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-white focus:outline-none"
+          className="md:hidden text-gray-600 focus:outline-none"
         >
           {isOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
@@ -56,7 +56,7 @@ export default function Navbar() {
                 <a
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="relative text-white font-medium hover:text-blue-600 transition-colors"
+                  className="relative text-gray-600 font-medium hover:text-pink-600 hover:font-bold transition-colors"
                 >
                   {link.name}
                 </a>
