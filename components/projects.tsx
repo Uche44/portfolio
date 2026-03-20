@@ -1,11 +1,16 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ChevronDown, ChevronUp } from "lucide-react";
 import { projects } from "@/lib/projects";
 import { aleo } from "@/app/ui/fonts";
 
 const Projects = () => {
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleProjects = showAll ? projects : projects.slice(0, 6);
+
   return (
     <section
       id="projects"
@@ -18,7 +23,7 @@ const Projects = () => {
       </h2>
 
       <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, i) => (
+        {visibleProjects.map((project, i) => (
           <div
             key={i}
             className="
@@ -39,21 +44,6 @@ const Projects = () => {
 
             <div className="bg-white rounded-xl p-4 flex flex-col h-full">
               <div className="relative w-full h-48 rounded-lg overflow-hidden pointer-events-none">
-                {/* progress flag */}
-
-                {/* {i === projects.length - 1 && (
-                  <span
-                    className="z-10 
-          absolute top-2 right-2
-          bg-pink-600 text-white text-[10px] font-semibold
-          px-2 py-1 rounded-md shadow-md
-          uppercase tracking-wide
-        "
-                  >
-                    In Progress
-                  </span>
-                )} */}
-
                 <Image
                   src={project.img}
                   alt={project.name}
@@ -117,6 +107,30 @@ const Projects = () => {
           </div>
         ))}
       </div>
+
+      {projects.length > 6 && (
+        <div className="mt-16 flex justify-center">
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="
+              flex items-center gap-2 px-8 py-3 rounded-full
+              bg-pink-600 text-white font-semibold
+              hover:bg-pink-700 transition duration-300
+              shadow-lg hover:shadow-pink-200/50
+            "
+          >
+            {showAll ? (
+              <>
+                View Less <ChevronUp size={20} />
+              </>
+            ) : (
+              <>
+                View More <ChevronDown size={20} />
+              </>
+            )}
+          </button>
+        </div>
+      )}
     </section>
   );
 };

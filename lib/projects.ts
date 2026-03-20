@@ -1,5 +1,39 @@
 export const projects = [
   {
+    img: "/dialexpert.png",
+    name: "DialExperts",
+    tools: [
+      "Nextjs",
+      "Prisma",
+      "PostgreSQL",
+      "Tailwindcss",
+      "Typescript",
+      "JWT",
+    ],
+    about:
+      "A micro-consultation platform that connects users with verified experts across any field for short, pay-per-minute calls",
+    url: "https://dial-experts-seven.vercel.app/",
+    github: "https://github.com/Uche44/dial-experts",
+  },
+  {
+    img: "/meme.png",
+    name: "MemeForge",
+    tools: ["Nextjs", "Supabase", "Tailwindcss", "Typescript", "Farcaster sdk"],
+    about:
+      "A social miniapp that allows users to create memes from viral farcaster posts and share them as casts on Farcaster",
+    url: "https://farcaster.xyz/?launchFrameUrl=https%3A%2F%2Fmemeforge-1.vercel.app%2F",
+    github: "https://github.com/Uche44/memeforge1",
+  },
+  {
+    img: "/agent.png",
+    name: "Stellar Agentpay Protocol",
+    tools: ["Nextjs", "Typescript", "TailwindCSS"],
+    about:
+      "A landing page for the stellar agentpay protocol that fully communicates their goals, services and values.",
+    url: "https://agentpay-protocol-gamma.vercel.app/",
+    github: "https://github.com/Uche44/stellar-agentpay-protocol",
+  },
+  {
     img: "https://res.cloudinary.com/dcw1m1rak/image/upload/v1764149109/encode_-_Brave_11_12_2025_3_53_58_PM_yidokk.png",
     name: "UniTrack",
     tools: [
@@ -15,22 +49,6 @@ export const projects = [
       "A university platform that streamlines final year project management, supervision and reporting between students, their supervisors and departmental admin.",
     url: "https://unitrack-two.vercel.app/",
     github: "https://github.com/Uche44/unitrack-frontend",
-  },
-  {
-    img: "/dialexpert.png",
-    name: "DialExperts",
-    tools: [
-      "Nextjs",
-      "Prisma",
-      "PostgreSQL",
-      "Tailwindcss",
-      "Typescript",
-      "JWT",
-    ],
-    about:
-      "A micro-consultation platform that connects users with verified experts across any field for short, pay-per-minute calls",
-    url: "https://dial-experts-seven.vercel.app/",
-    github: "https://github.com/Uche44/dial-experts",
   },
   {
     img: "https://res.cloudinary.com/dcw1m1rak/image/upload/v1762256388/Learnthru_dashboard_with_calendar_feature_v6gsry.png",
