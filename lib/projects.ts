@@ -1,5 +1,21 @@
 export const projects = [
   {
+    img: "/gdg.png",
+    name: "Google Developer Group on Campus Website",
+    tools: [
+      "Nextjs",
+      "Typescript",
+      "Tailwindcss",
+      "Fastapi",
+      "PostgreSQL",
+      "JWT",
+    ],
+    about:
+      "A community website for Google Developer Group on Campus, University of Nigeria Nsukka (UNN)",
+    url: "https://gdg-website-topaz-rho.vercel.app",
+    github: "",
+  },
+  {
     img: "/dialexpert.png",
     name: "DialExperts",
     tools: [
